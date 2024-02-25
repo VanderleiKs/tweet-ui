@@ -3,31 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --twitter-blue: #1da1fe;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.bg-twitter-color{
+  background: var(--twitter-blue)
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.bg-twitter-color:hover{
+  filter: brightness(0.95)
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.twitter-color{
+  color: var(--twitter-blue)
+}
+
+.dark{
+  @apply bg-slate-800 text-white
+}
+
+.light{
+  @apply bg-slate-50 text-black
+}
+
+.link-sidebar{
+  @apply flex gap-2 items-center
 }
